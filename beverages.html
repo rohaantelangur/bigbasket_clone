@@ -381,17 +381,14 @@
             <div id="smallcontainer">
                 <div id="box">
                     <h2>Beverages</h2>
-                    <select name="" style="height: 30px; margin-top: 20px;">
-                        <option value="">Popularity</option>
-                        <option value="">Price-Low to High</option>
-                        <option value="">Price-High to Low</option>
-                        <option value="">Alphabetical</option>
-                        <option value="">Rupee Saving-High to Low</option>
-                        <option value="">Rupee Saving Low to High</option>
-                        <option value="">%Off- High to Low</option>
+                    <select id="sortby" style="height: 30px; margin-top: 20px;">
+                        <option value="pop">Popularity</option>
+                        <option value="asc">Price-Low to High</option>
+                        <option value="dsc">Price-High to Low</option>
+                        <option value="alpha">Alphabetical</option>
                     </select>
                 </div>
-                <div style="cursor: pointer; font-size: 20px;"><i class="fa-solid fa-truck"></i>All Products</div>
+                <div style="cursor: pointer; font-size: 20px;"><i class="fa-solid fa-truck" style="color: #84c225;"></i>All Products</div>
                 <hr>
                 <div id="pdtbox">
 
@@ -575,7 +572,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/102871_10-red-label-tea.jpg",
         proName:"Red-label",
         detail:"Tea",
-        rate:"4.1✰",
+        rate:4.1,
         select:"<option>1kg- Rs.514.00</option>",
         price:514.00,
         strike:"MRP.Rs.570",
@@ -585,7 +582,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/162275_15-bournvita-chocolate-health-drink-bournvita.jpg",
         proName:"Bournvita",
         detail:"Chocolate Health Drink - Bournvita",
-        rate:"4.2✰",
+        rate:4.2,
         select:"<option>75gm Pouch</option>",
         price:28.08,
         strike:"MRP.Rs.30",
@@ -595,7 +592,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/1200127_7-coca-cola-coke-zero-soft-drink-no-sugar.jpg",
         proName:"Coca Cola",
         detail:"Coke Zero Soft Drink - No Sugar",
-        rate:"4.2✰",
+        rate:4.2,
         select:"<option>6x300ml Multi Pack Rs-186</option>",
         price:186,
         strike:"MRP.Rs.240",
@@ -605,7 +602,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/1204484_1-taj-mahal-tea.jpg",
         proName:"TajMahal",
         detail:"Tea",
-        rate:"4.2✰",
+        rate:4.2,
         select:"<option>2x500gm Multipack-Rs.671.50</option>",
         price:671.50,
         strike:"MRP.Rs.790",
@@ -615,7 +612,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/240065_14-tata-tea-gold-tea.jpg",
         proName:"Tata Tea Gold",
         detail:"Tea",
-        rate:"4.2✰",
+        rate:4.2,
         select:"<option>1kg Rs.470.00</option>",
         price:470,
         strike:"MRP.Rs.610",
@@ -625,7 +622,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/266579_23-bru-instant-coffee.jpg",
         proName:"Bru",
         detail:"Instant Coffee",
-        rate:"4.2✰",
+        rate:4.2,
         select:"<option>200gm Pouch-Rs.297.50</option>",
         price:297.50,
         strike:"MRP.Rs.350",
@@ -635,7 +632,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/40071513_8-horlicks-health-nutrition-drink-classic-malt.jpg",
         proName:"Horlicks",
         detail:"Health & Nutrition Drink - Classic Malt",
-        rate:"4.2✰",
+        rate:4.2,
         select:"<option>750gm- Rs.306.00</option>",
         price:306,
         strike:"MRP.Rs.340",
@@ -645,7 +642,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/40032982_8-thums-up-soft-drink.jpg",
         proName:"Thums Up",
         detail:"Soft Drink",
-        rate:"4.1✰",
+        rate:4.1,
         select:"<option>1.75lit Rs.75.70</option>",
         price:75.70,
         strike:"MRP.Rs.90.00",
@@ -655,7 +652,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/266596_6-3-roses-dust-tea.jpg",
         proName:"3 Roses",
         detail:"Dust Tea",
-        rate:"4.2✰",
+        rate:4.2,
         select:"<option>250gm Rs.161.50</option>",
         price:161.50,
         strike:"MRP.Rs.190",
@@ -665,7 +662,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/186070_8-cothas-coffee-.jpg",
         proName:"Cothas Coffee",
         detail:"Coffee - Regular",
-        rate:"4.3✰",
+        rate:4.3,
         select:"<option>500gm puch RS.249.00</option>",
         price:249.00,
         strike:"MRP-Rs.280",
@@ -675,7 +672,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/288068_6-kinley-sparkling-water-club-soda.jpg",
         proName:"Kinley",
         detail:"Sparkling Water - Club Soda",
-        rate:"4.2✰",
+        rate:4.2,
         select:"<option>1.25L PET Bottle-Rs.28.50</option>",
         price:28.50,
         strike:"MRP.Rs.30",
@@ -685,7 +682,7 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/mm/1203207_1-tropicana-100-orange-juice.jpg",
         proName:"Tropicana",
         detail:"100% Orange Juice",
-        rate:"3.8✰",
+        rate:3.8,
         select:"<option>3x1L Multipack-Rs.366.00</option>",
         price:366,
         strike:"MRP.Rs.420",
@@ -694,19 +691,22 @@
        
        ];
 
-       data.map(function(ele){
+       var datafromlocal=JSON.parse(localStorage.getItem("beverages")) || []
+       displayData(data)
+       function  displayData(data){
+        document.querySelector("#pdtbox").innerHTML="";
+        data.map(function(ele){
            var div=document.createElement("div");
 
            var div2=document.createElement("div");
            var off=document.createElement("p");
            off.innerText=ele.off;
-            
            div2.setAttribute("class","offer");
            div2.append(off);
         
            var image=document.createElement("img");
            image.src=ele.image_url;
-           image.style.marginLeft="30px"
+           image.style.margin="30px"
 
            var div4=document.createElement("div");
            var pro=document.createElement("p");
@@ -717,12 +717,15 @@
            name.innerText=ele.detail;
            name.style.margin="-12px auto -2px auto"
            var rate=document.createElement("button");
-           rate.innerText=ele.rate;
+           rate.innerText=`${ele.rate}★`;
+           rate.style.border="none";
+           rate.style.fontWeight="bold";
+           rate.style.color="#84c225";
            div4.append(pro,name,rate)
 
            var select=document.createElement("select");
            select.innerHTML=ele.select;
-           select.style.width="90%"
+           select.style.width="90%";
 
            var div3=document.createElement("div");
            var price=document.createElement("p");
@@ -733,13 +736,13 @@
            div3.append(price,strike);
            div3.style.display="flex";
            div3.style.justifyContent="space-evenly";
-          
 
            var div5=document.createElement("div");
            var icon=document.createElement("i");
            icon.setAttribute("class","fa-solid fa-truck");
            var del=document.createElement("p");
            del.innerText=ele.common;
+            div5.style.display="flex"
             div5.append(icon,del);
            
            var divbot=document.createElement("div");
@@ -750,11 +753,58 @@
            quant.value="1"
            var but=document.createElement("button");
            but.innerText="Add";
+           but.setAttribute("id","but");
            divbot.append(quant,but);
 
            div.append(div2,image,div4,select,div3,div5,divbot); 
 
            document.querySelector("#pdtbox").append(div);
-           
+           localStorage.setItem("beverages",JSON.stringify(data));
        })
+       }
+       document.querySelector("#sortby").addEventListener("change",sortByPrice);
+       function sortByPrice(){
+        var sortData=document.querySelector("#sortby").value;
+
+          if(sortData=="dsc"){
+          data.sort(function(a,b){
+            if(a.price>b.price) return -1;
+            if(a.price<b.price) return 1;
+            return 0;
+          })
+       console.log(data)
+       displayData(data);
+          }
+
+       if(sortData=="asc"){
+          data.sort(function(a,b){
+            if(a.price>b.price) return 1;
+            if(a.price<b.price) return -1;
+            return 0;
+          })
+       console.log(data)
+       displayData(data)
+      }
+
+        if(sortData=="alpha"){
+      data.sort(function (a, b) {
+      if (a.detail > b.detail) return 1;
+      if (a.detail < b.detail) return -1;
+      return 0;
+    });
+
+    console.log(data);
+    displayData(data)
+        }
+        if(sortData=="pop"){
+      data.sort(function (a, b) {
+      if (a.rate > b.rate) return -1;
+      if (a.rate < b.rate) return 1;
+      return 0;
+    });
+
+    console.log(data);
+    displayData(data)
+        }
+    }
 </script>

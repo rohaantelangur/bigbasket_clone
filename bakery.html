@@ -115,6 +115,12 @@
             padding: auto 20px;
             text-align: right;
         }
+        #but{
+          margin-left: 20px;
+          border: none;
+          background-color:#fadc7a;
+          border-radius: 3px;
+        }
         @media only screen and (min-width:70px) and (max-width:420px)
         {
             #pdtbox{
@@ -373,17 +379,14 @@
             <div id="smallcontainer">
                 <div id="box">
                     <h2>Bakery,Cakes and Dairy</h2>
-                    <select name="" style="height: 30px; margin-top: 20px;">
-                        <option value="">Popularity</option>
-                        <option value="">Price-Low to High</option>
-                        <option value="">Price-High to Low</option>
-                        <option value="">Alphabetical</option>
-                        <option value="">Rupee Saving-High to Low</option>
-                        <option value="">Rupee Saving Low to High</option>
-                        <option value="">%Off- High to Low</option>
+                    <select id="sortby" style="height: 30px; margin-top: 20px;">
+                        <option value="pop">Popularity</option>
+                        <option value="asc">Price-Low to High</option>
+                        <option value="dsc">Price-High to Low</option>
+                        <option value="alpha">Alphabetical</option>
                     </select>
                 </div>
-                <div style="cursor: pointer; font-size: 20px;"><i class="fa-solid fa-truck"></i> <u>All Products</u> </div>
+                <div style="cursor: pointer; font-size: 20px;"><i class="fa-solid fa-truck" style="color: #84c225;"></i> <u>All Products</u> </div>
                 <hr>
                 <div id="pdtbox">
 
@@ -567,7 +570,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/40003150_3-milky-mist-paneer-premium-fresh.jpg",
         proName:"Milkymist",
         detail:"Paneer - Premium Fresh",
-        rate:"3.9✰",
+        // rate:"3.9✰",
+        rate:3.9,
         select:"<option>500gm Pouch- Rs.213.00</option>",
         price:213.00,
         strike:"Rs.265",
@@ -577,7 +581,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/242671_1-nandini-goodlife-toned-milk.jpg",
         proName:"Nandini",
         detail:"Goodlife - Toned Milk",
-        rate:"4.1✰",
+        // rate:"4.1✰",
+        rate:4.1,
         select:"<option>500ml Pouch</option>",
         price:26.00,
         strike:"MRP.Rs.26",
@@ -587,7 +592,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/1200163_4-amul-butter-pasteurized.jpg",
         proName:"Amul",
         detail:"Butter - Pasteurized",
-        rate:"4.2✰",
+        // rate:"4.2✰",
+        rate:4.2,
         select:"<option>2x100gm Multi Pack</option>",
         price:95.00,
         strike:"MRP.Rs.100",
@@ -597,7 +603,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/1204360_1-fresho-bread-whole-wheat-chemical-free-400g-eggs-table-tray-30pcs.jpg",
         proName:"Fresho",
         detail:"Bread - Whole Wheat, Chemical Free 400G + Eggs - Table Tray 30pcs",
-        rate:"4.2✰",
+        // rate:"4.2✰",
+        rate:4.2,
         select:"<option>combo 2 items</option>",
         price:197.05,
         strike:"MRP.Rs.249",
@@ -607,7 +614,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/40025355_6-fresho-whole-wheat-bread-safe-preservative-free.jpg",
         proName:"Fresho",
         detail:"Whole Wheat Bread - Safe, Preservative Free",
-        rate:"3.9✰",
+        // rate:"3.9✰",
+        rate:3.9,
         select:"<option>400gm Pouch- Rs.37.05</option>",
         price:37.05,
         strike:"MRP.Rs.39",
@@ -617,7 +625,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/1204352_1-fresho-sandwich-bread-white-chemical-free-400g-eggs-regular-6pcs.jpg",
         proName:"Fresho",
         detail:"Bread - Whole Wheat, Chemical Free 400G + Eggs - Regular 6pcs",
-        rate:"3.9✰",
+        // rate:"3.9✰",
+        rate:3.9,
         select:"<option>combo 2 items</option>",
         price:73.00,
         strike:"MRP.Rs.89",
@@ -627,7 +636,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/1209046_3-amul-taaza-homogenised-toned-milk.jpg",
         proName:"Amul",
         detail:"Homogenised Toned Milk",
-        rate:"4.2✰",
+        // rate:"4.2✰",
+        rate:4.2,
         select:"<option>2x1L Multipack-Rs.124.71</option>",
         price:124.71,
         strike:"MRP.Rs.132",
@@ -637,7 +647,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/40137716_10-id-natural-paneer.jpg",
         proName:"id-Fresho",
         detail:"Soft & Creamy Paneer",
-        rate:"3.9✰",
+        // rate:"3.9✰",
+        rate:3.9,
         select:"<option>200gm Pouch- Rs.80.80</option>",
         price:80.80,
         strike:"MRP.Rs.110",
@@ -647,7 +658,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/1202761_2-amul-cheese-slices.jpg",
         proName:"Amul",
         detail:"Cheese Slices",
-        rate:"4.2✰",
+        // rate:"4.2✰",
+        rate:4.2,
         select:"<option>2x200gm Multipack- Rs.235.20</option>",
         price:235.20,
         strike:"MRP.Rs.260",
@@ -657,7 +669,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/1207078_2-amul-masti-buttermilk-spice.jpg",
         proName:"Amul",
         detail:"Masti Buttermilk - Spice",
-        rate:"4.2✰",
+        // rate:"4.2✰",
+        rate:4.2,
         select:"<option>2x1L Multipack-Rs.93.70</option>",
         price:93.70,
         strike:"MRP.Rs.100",
@@ -667,7 +680,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/40003150_3-milky-mist-paneer-premium-fresh.jpg",
         proName:"Milkymist",
         detail:"Paneer - Premium Fresh",
-        rate:"3.9✰",
+        // rate:"3.9✰",
+        rate:3.9,
         select:"<option>500gm Pouch- Rs.213.00</option>",
         price:213.00,
         strike:"MRP.Rs.265",
@@ -677,7 +691,8 @@
         image_url:"https://www.bigbasket.com/media/uploads/p/s/40045943_1-amul-butter-pasteurised.jpg",
         proName:"Amul",
         detail:"Butter - Pasteurised",
-        rate:"4.2✰",
+        // rate:"4.2✰",
+        rate:4.2,
         select:"<option>200gm Tub</option>",
         price:96.00,
         strike:"MRP.Rs.102",
@@ -686,13 +701,16 @@
        
        ];
 
-       data.map(function(ele){
+       var datafromlocal=JSON.parse(localStorage.getItem("bakery")) || []
+       displayData(data)
+       function  displayData(data){
+        document.querySelector("#pdtbox").innerHTML="";
+        data.map(function(ele){
            var div=document.createElement("div");
 
            var div2=document.createElement("div");
            var off=document.createElement("p");
            off.innerText=ele.off;
-            
            div2.setAttribute("class","offer");
            div2.append(off);
         
@@ -709,14 +727,15 @@
            name.innerText=ele.detail;
            name.style.margin="-12px auto -2px auto"
            var rate=document.createElement("button");
-           rate.innerText=ele.rate;
-           rate.style.fontWeight="bold"
-           rate.style.color="green"
+           rate.innerText=`${ele.rate}★`;
+           rate.style.border="none";
+           rate.style.fontWeight="bold";
+           rate.style.color="#84c225";
            div4.append(pro,name,rate)
 
            var select=document.createElement("select");
            select.innerHTML=ele.select;
-           select.style.width="90%"
+           select.style.width="90%";
 
            var div3=document.createElement("div");
            var price=document.createElement("p");
@@ -727,6 +746,7 @@
            div3.append(price,strike);
            div3.style.display="flex";
            div3.style.justifyContent="space-evenly";
+
            var div5=document.createElement("div");
            var icon=document.createElement("i");
            icon.setAttribute("class","fa-solid fa-truck");
@@ -743,11 +763,60 @@
            quant.value="1"
            var but=document.createElement("button");
            but.innerText="Add";
+           but.setAttribute("id","but");
            divbot.append(quant,but);
 
            div.append(div2,image,div4,select,div3,div5,divbot); 
 
            document.querySelector("#pdtbox").append(div);
-           
+           localStorage.setItem("bakery",JSON.stringify(data));
        })
+       }
+       document.querySelector("#sortby").addEventListener("change",sortByPrice);
+       function sortByPrice(){
+        var sortData=document.querySelector("#sortby").value;
+
+          if(sortData=="dsc"){
+          data.sort(function(a,b){
+            if(a.price>b.price) return -1;
+            if(a.price<b.price) return 1;
+            return 0;
+          })
+       console.log(data)
+       displayData(data);
+          }
+
+       if(sortData=="asc"){
+          data.sort(function(a,b){
+            if(a.price>b.price) return 1;
+            if(a.price<b.price) return -1;
+            return 0;
+          })
+       console.log(data)
+       displayData(data)
+      }
+
+        if(sortData=="alpha"){
+      data.sort(function (a, b) {
+      if (a.detail > b.detail) return 1;
+      if (a.detail < b.detail) return -1;
+      return 0;
+    });
+
+    console.log(data);
+    displayData(data)
+        }
+        if(sortData=="pop"){
+      data.sort(function (a, b) {
+      if (a.rate > b.rate) return -1;
+      if (a.rate < b.rate) return 1;
+      return 0;
+    });
+
+    console.log(data);
+    displayData(data)
+        }
+    }
+    
+
 </script>
