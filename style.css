@@ -6,9 +6,9 @@
     width: 90%;
     margin-top: 17px;
 }
-.search-btn{
+/* .search-btn{
     
-}
+} */
 #cart-img{
     font-size: 40px;
     color: red;
@@ -25,6 +25,7 @@
     margin-left: 10px;
     /* border: 1px solid red; */
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 
 }
 #cart-count{
@@ -168,4 +169,20 @@ margin: auto;
 }
 .Pro5{
 display: flex;
+}
+.shadow1:hover{
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+    /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
+    /* box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px; */
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: green;
 }
