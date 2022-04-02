@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>kitchen-garden</title>
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+    <style>
+    *{
+         font-family: ProximaNovaA-Regular;
+    }
+        .imgslide{
+            overflow: hidden;
+            width: 1200px;
+            margin-left: 3%;
+            margin-top: 20px;
+        }
+        @-webkit-keyframes slide_animation{
+            0%{left:0px;}
+           10%{left:0%;}
+           20%{left:-100%;}
+           30%{left:-100%;}
+           40%{left:-200%;}
+           50%{left:-200%;}
+           60%{left:-300%;}
+           70%{left:-300%;}
+           80%{left:-400%;}
+           90%{left:-400%;}
+           100%{left:0%;}
+        }
+        .imgframe{
+            display: flex;
+            width:3600px;
+            height: auto;
+            margin: auto;
+            position: relative;
+            -webkit-animation-name: slide_animation;
+            -webkit-animation-duration: 33s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-play-state: running;
+        }
+        .imgcontainer{
+            height: auto;
+            width: auto;
+            position: relative;
+            float: left;
+        }
+        #bigcontainer{
+            height: auto;
+            width: auto;
+            /* border: 1px solid black; */
+            display: flex;
+        }
+        #left{
+            height: auto;
+            width: 300px;
+            /* border: 1px solid red; */
+            margin-top: 40px;
+            margin-left: 30px;
+            border-right: 1px solid grey;
+            
+        }
+        #smallcontainer{
+            height: auto;
+            width: 1100px;
+            /* border: 1px solid red; */
+            margin-right: 30px;
+            padding: 10px;
+        }
+        #box{
+            height: auto;
+            width: 100%;
+            /* border: 1px solid blue; */
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #pdtbox{
+            height: auto;
+            width: 100%;
+            /* border: 1px solid black; */
+            display: grid;
+            padding: 10px;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+        }
+        #pdtbox>div{
+            /* border: 1px solid black; */
+            padding: 10px;
+            margin: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+         }
+        .offer > p{
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            height: 20px;
+            width: 100%;
+            color: #ba5253;
+            padding: auto 20px;
+            text-align: right;
+        }
+        #but{
+          margin-left: 20px;
+          border: none;
+          background-color:#fadc7a;
+          border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <!-- <div id="topmenu">
+            <div></div>
+            <i class="bi bi-telephone"><a href="">1860 123 1000</a></i>
+            <i class="bi bi-geo-alt"></i>
+            <i class="bi bi-person"> <a href="">Login/Sign Up</a> </i>
+        </div> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <!-- Column -->
+                </div>
+                <div class="col-5 text-end">
+                    <i class="bi bi-telephone">1860 123 1000</i>
+                    <i class="bi bi-geo-alt m-2"><a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Address</a></i>
+                    <i class="bi bi-person m-1"> <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Login/Sign Up</a> </i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section>
+    <!-- Modal for login-->
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">LOGIN OR SIGN UP</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- ... -->
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">+91</span>
+            <input type="text" class="form-control" placeholder="Enter Mobile Number (10-digit)" aria-label="Username" aria-describedby="addon-wrapping">
+          </div><br>
+          <p class="text-center">Or</p>
+          <div class="d-grid gap-2 col-12 mx-auto">
+              <button class="btn btn-light border" type="button">Login using Email Address</button>
+              <button class="btn btn-success" type="button">Continue</button>
+            </div>
+            <p class="fw-light text-center">By continuing, I accept TCP-bigbasket’s Terms and Conditions and<br> Privacy Policy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal for Address-->
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+            <select name="" id="" style="width: 100%; height: 35px;">
+                <option value="">Select your city</option>
+                <option value="">Pune</option>
+                <option value="">Mumbai</option>
+                <option value="">Ahmednagar</option>
+                <option value="">Satara</option>
+                <option value="">Nashik</option>
+            </select>
+
+            <div class="input-group mb-3 my-3">
+                <input type="text" class="form-control" placeholder="Enter your area / apprtment / pincode" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              </div>
+              <div class="d-grid gap-2 col-12 mx-auto">
+                <button class="btn btn-success" type="button">Continue</button>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="https://www.bbassets.com/static/v2530/custPage/build/content/img/bb_logo.png" alt=""
+                        srcset="">
+                </div>
+                <div class="col-7">
+                    <input id="search-bar" type="text">
+                    <button class="search-btn bg-success"><i class="bi bi-search"></i></button>
+                </div>
+                <div class="col-1">
+
+                </div>
+                <div class="col-2">
+                    <div class="cart-icon">
+                        <div><i id="cart-img" class="bi bi-basket"></i></div>
+                        <div id="cart-count"><samp id="basket">My Basket</samp><br><samp id="item-count">0 items</samp>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <hr id="menu-sepreter">
+            <div class="row">
+                <div class="col-2 dropdown">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP BY CATEGGOY
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Fruits & Vegetables</a></li>
+                          <li><a class="dropdown-item" href="#">Foodgrains, Oil & Masala</a></li>
+                          <li><a class="dropdown-item" href="#">Bakery, Cakes & Dairy</a></li>
+                          <li><a class="dropdown-item" href="#">Beverages</a></li>
+                          <li><a class="dropdown-item" href="#">Snacks & Branded Foods</a></li>
+                          <li><a class="dropdown-item" href="#">Beauty & Hygiene</a></li>
+                          <li><a class="dropdown-item" href="#">Cleaning & Household</a></li>
+                          <li><a class="dropdown-item" href="#">Kitchen, Garden & Pets</a></li>
+                          <li><a class="dropdown-item" href="#">Eggs, Meat & Fish</a></li>
+                          <li><a class="dropdown-item" href="#">Gourmet & World Food</a></li>
+                          <li><a class="dropdown-item" href="#">Baby Care</a></li>
+                          <li><a class="dropdown-item" href="#">View All</a></li>
+                        </ul>
+                      </div>
+                    <!-- <a href="#">SHOP BY CATEGGOY</a> -->
+                </div>
+                <div class="col-1">
+                    <i class="bi bi-tag-fill">OFFERS</i>
+                </div>
+                <div class="col-2">
+                    <i class="bi bi-shop"> BB SPECIALTY</i>
+                </div>
+            </div>
+            <hr id="menu-sepreter">
+        </div>
+        <!-- <hr> -->
+    </section>
+
+    <div class="imgslide">
+        <div class="imgframe">
+            <div class="imgcontainer">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/L1_CXNP7844_megasale_300_250122.jpg" alt="">
+            </div>
+            <div class="imgcontainer">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/cxnp8223_l1_kgp_c_pet-care_300_090222.jpg" alt="">
+            </div>
+            <div class="imgcontainer">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/L1_bonchina-1200X300.jpg" alt="">
+            </div>
+            <div class="imgcontainer">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/L1_CXNP7963_container-sets_300_290122.jpg" alt="">
+            </div>
+            <div class="imgcontainer">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/L1_CXNP7844_megasale_300_250122.jpg" alt="">
+            </div>
+            <div class="imgcontainer">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/L1_CXNP7846_hawkins_300_250122.jpg" alt="">
+            </div>
+            <div class="imgcontainer">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/L1_CXNP9591_glassware-ceramic_692_210322.jpg" alt="">
+            </div>
+            <div class="imgcontainer">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/L1_L1_CXNP9571_flask_300_150322.jpg" alt="">
+            </div>
+        </div>
+    </div>
+        <div id="bigcontainer">
+            <div id="left">
+                <h3 style="cursor: pointer;">Category</h3>
+                <hr align="left">
+                <h5 style="color:#84c225;">Kitchen,Garden & Pets</h5>
+                        <p id="side">Appliances & Electricals</p>
+                        <p id="side">Gardening</p>
+                        <p id="side">Kitchen Accessories </p>
+                        <p id="side">Pet Food & Accessories</p>
+                        <p id="side">Steel Utensils </p>
+                
+               <h3> Brand</h3>
+                <hr align="left">
+                <input type="checkbox" onclick="funclick1()"/>BB Home <br>
+                <input type="checkbox" onclick="funclick2()"/> Duracell<br>
+                <input type="checkbox" onclick="funclick3()"/> Pedigree<br>
+                <input type="checkbox" onclick="funclick4()"/> Natures Plus<br>
+                
+                <br>
+                <h3> Price </h3>
+                <hr align="left">
+                  <div>
+                  <input type="checkbox" value="less100" class="theClass" onclick="funprice1()"/>less than Rs.100 <br>
+                  <input type="checkbox"  value="100to200" class="theClass" onclick="funprice2()"/>Rs.100 to Rs.200<br>
+                  <input type="checkbox" value="upto500" class="theClass" onclick="funprice3()"/>upto Rs 500<br>
+                  <input type="checkbox" value="less1000" class="theClass" onclick="funprice4()"/>greter than Rs.1000<br>
+                  </div>
+            </div>
+            <div id="smallcontainer">
+                <div id="box">
+                    <h2>Kitchen, Garden & Pets</h2>
+                    <select id="sortby" style="height: 30px; margin-top: 20px;">
+                      <option value="">Select Sort</option>
+                        <option value="pop">Popularity</option>
+                        <option value="asc">Price-Low to High</option>
+                        <option value="dsc">Price-High to Low</option>
+                        <option value="alpha">Alphabetical</option>
+                    </select>
+                </div>
+                <div style="cursor: pointer; font-size: 20px;"><i class="fa-solid fa-truck" style="color: #84c225;"></i><u>All Products</u> </div>
+                <hr>
+                <div id="pdtbox">
+
+                </div>
+            </div>
+        </div>
+<!-- Footer-1 -->
+    <section>
+        <div class="container my-5">
+            <div class="container">
+                <div class="row">
+                  <div class="col text_color">
+                    Bigbasket<br>
+                    <a href="">About Us</a><br>
+                    <a href="">In News</a><br>
+                    <a href="">Green bigbasket</a><br>
+                    <a href="">Privacy Policy</a><br>
+                    <a href="">Affiliate</a><br>
+                    <a href="">Terms and Conditions</a><br>
+                    <a href="">Careers At bigbasket</a><br>
+                    <a href="">bb Instant</a><br>
+                    <a href="">bb Daily</a><br>
+                    <a href="">bb Blog</a><br>
+                    <a href="">bbnow</a>
+                  </div>
+                  <div class="col text_color">
+                    Help<br>
+                    <a href="">FAQs</a><br>
+                    <a href="">Contact Us</a><br>
+                    <a href="">bb Wallet FAQs</a><br>
+                    <a href="">bb Wallet T&Cs</a><br>
+                    <a href="">Vendor Connect</a><br>
+                  </div>
+                  <div class="col text_color">
+                    <p>Download Our App</p>
+                    <img src="https://www.bbassets.com/static/v2530/custPage/build/content/img/Google-App-store-icon.png" alt="">
+                    <img src="https://www.bbassets.com/static/v2530/custPage/build/content/img/Apple-App-store-icon.png" alt="">
+                  </div>
+                  <div class="col">
+                    <p class="text_color">Get Social With Us</p>
+                    <i class="bi bi-facebook Footer-1-icon"></i>
+                    <i class="bi bi-instagram Footer-1-icon"></i>
+                    <i class="bi bi-pinterest Footer-1-icon"></i>
+                    <i class="bi bi-twitter Footer-1-icon"></i>
+                  </div>
+                </div>
+              </div>
+            <hr>
+        </div>
+    </section>
+
+    <!-- Footer-2 -->
+    <section>
+        <div class="container my-5">
+            <div class="row">
+              <div class="col-2">
+                <p class="text_color">POPULAR CATEGORIES:</p>
+              </div>
+              <div class="col-10 text_small">
+                Sunflower Oils, Wheat Atta, Ghee, Milk, Health Drinks, Flakes, Organic F&V, Namkeen, Eggs, Floor Cleaners, Other Juices, Leafy Vegetables, Frozen Veg Food, Diapers & Wipes,
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                  <p class="text_color">POPULAR BRANDS:</p>
+                </div>
+                <div class="col-10 text_small">
+                    Amul, Nescafe , MTR, Red Bull, elite cake, Pediasure, Yummiez, Yera, Yakult, Britannia, Wow Momo, Fortune , Haldirams , Ferrero, Lays, Patanjali, McCain, kwality walls, Cadbury Dairy Milk, Pedigree,                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-2">
+                  <p class="text_color">CITIES WE SERVE:</p>
+                </div>
+                <div class="col-10 text_small">
+                    Bangalore, Hyderabad, Mumbai, Pune, Chennai, Delhi, Mysore, Madurai, Coimbatore, Vijayawada-Guntur, Kolkata, Ahmedabad-Gandhinagar, Nashik, Lucknow-Kanpur, Gurgaon, Vadodara, Visakhapatnam, Surat, Nagpur, Patna, Indore, Chandigarh Tricity, Jaipur, Bhopal, Noida-Ghaziabad, Kochi, Krishna District, Bhubaneshwar-Cuttack, Guwahati, Renigunta, Hubli, Davanagere, Trichy, Amaravathi, Raipur, Rajkot, Gwalior, Bareilly, Allahabad, Hyderabad Rural, Bangalore Rural, Chennai Rural, Vizag Rural, Lucknow Rural, Noida Rural, Ahmedabad Rural, Bhopal Rural, Bhubaneswar Rural, Coimbatore Rural, Chandigarh Rural, Gurugram Rural, Guwahati Rural, Indore Rural, Kochi Rural, Kolkata Rural, Mumbai Rural, Mysore Rural, Nagpur Rural, Patna Rural, Pune Rural, Surat Rural, Vadodara Rural, Jaipur Rural, 
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-2">
+                  <p class="text_color">PAYMENT OPTIONS:</p>
+                </div>
+                <div class="col-10">
+                      CASH ON DELIVERY
+                </div>
+              </div>
+
+          </div>
+    </section>
+
+    <!-- Footer-3 -->
+    <section class="bg-light">
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                  <small>
+                    Copyright © 2021-2023 Supermarket Grocery Supplies Pvt Ltd
+                  </small>
+                
+              </div>
+            </div>
+          </div>
+    </section>
+
+
+
+
+
+    <!-- <h1>Hello, world!</h1> -->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
+<script>
+    var data=[
+       {off:"Get 19% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/s/240100_9-duracell-ultra-alkaline-battery-aa.jpg",
+         proName:"Duracell",
+         detail:"Ultra Alkaline Battery AA",
+         rate:4.2,
+         select:"4 Pcs",
+         price:130,
+         strike:"Rs.160",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+       },
+       {off:"SAVE Rs 295✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/s/30005108_18-pedigree-dry-dog-food-chicken-vegetables-for-adult-dogs.jpg",
+         proName:"Pedigree",
+         detail:"Dry Pet Food - For Adult Dogs, Chicken & Vegetables",
+         rate:4.4,
+         select:"15kg -Rs2655.00",
+         price:2655,
+         strike:"Rs.2950",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+       },
+       {off:"Get 51% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/s/40186000_4-bb-home-stainless-steel-ghee-pot-high-quality-durable.jpg",
+         proName:"BB Home",
+         detail:"Stainless Steel Ghee Pot - High Quality, Durable",
+         rate:4.3,
+         select:"400ml -Rs229.00",
+         price:229,
+         strike:"Rs.460",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+       },
+       {off:"Get 39% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/s/1214644_1-philips-led-bulb-10-watt-cool-day-light-ace-saver-base-b22.jpg",
+         proName:"Philips",
+         detail:"LED Bulb - 10 Watt, Cool Day Light, Ace Saver Base B22",
+         rate:4.2,
+         select:"2x1 pc Multipack-Rs242.50",
+         price:242.50,
+         strike:"Rs.400",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+       },
+       {off:"Get 44% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/s/40185972_5-bb-home-stainless-steel-pav-bhajiidli-plate-oval-shape.jpg",
+         proName:"BB Home",
+         detail:"Stainless Steel Pav Bhaji/Idli Plate - Oval Shape",
+         rate:4,
+         select:" pc- Rs269",
+         price:269,
+         strike:"Rs.479",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+       },
+       {off:"SAVE Rs 41 ✹",
+        image_url:"https://www.bigbasket.com/media/uploads/p/mm/30005143_17-whiskas-dry-cat-food-ocean-fish-flavour-for-adult-cats-1-year.jpg",
+        proName:"Whiskas",
+        detail:"Dry Cat Food - Junior Ocean Fish, For Kittens, 2-12 Months",
+        rate:4.6,
+        select:"1.1 kg-Rs369",
+        price:369,
+        strike:"Rs.410",
+        common:"Standard Delivery:Tomorrow 8:00AM-12:30PM",
+       },
+       {off:"Get 38% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/mm/40188982_4-bb-home-pacific-steel-insulated-vacuum-flask.jpg",
+         proName:"BB Home",
+         detail:"Pacific Steel Insulated Vacuum Flask",
+         rate:4.5,
+         select:"750ml, Rs.559.00",
+         price:559,
+         strike:"Rs.899",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+       },
+       {off:"Get 12% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/mm/40008608_8-natures-plus-neem-oil.jpg",
+         proName:"Natures Plus",
+         detail:"Neem Oil",
+         rate:4.2,
+         select:"100mi -Rs 79.00",
+         price:79,
+         strike:"Rs.90",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+       },
+       {off:"Get 10% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/mm/40235051_1-whiskas-wet-cat-food-adult-1-year-chicken-in-gravy-balanced-nutrition-shiny-coat.jpg",
+         proName:"Whiskas",
+         detail:"Wet Cat Food - Adult, +1 Year, Chicken In Gravy, Balanced Nutrition, Shiny Coat",
+         rate:3.2,
+         select:"85kg-Rs 36.00",
+         price:36,
+         strike:"Rs.40",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+       },
+       {off:"Get 35% off ✹",
+        image_url:"https://www.bigbasket.com/media/uploads/p/mm/40209691_1-natures-plus-flower-pot-100.jpg",
+        proName:"Natures Plus",
+        detail:"Flower Pot 100",
+        rate:3.6,
+        select:"10 x 6 x 8.5-Rs.65.00",
+        price:65,
+        strike:"Rs.100",
+        common:"Standard Delivery:Tomorrow 8:00AM-12:30PM",
+       },
+       {off:"Get 18% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/s/1214626_1-duracell-ultra-alkaline-battery-aa.jpg",
+         proName:"Duracell",
+         detail:"Ultra-Alkaline Battery AA",
+         rate:4.6,
+         select:"2 x 8 pcs Multipack-Rs450.80",
+         price:450.80,
+         strike:"Rs.630",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+       },
+       {off:"SAVE Rs 205 ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/s/182218_15-pedigree-dry-dog-food-meat-rice-for-adult-dogs.jpg",
+         proName:"Pedigree",
+         detail:"Dry Dog Food - Meat & Rice, For Adult Dogs",
+         rate:4.4,
+         select:"10kg -Rs 1845.00",
+         price:1845.00,
+         strike:"Rs.2059",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+       },
+       {off:"Get 13% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/s/40008669_7-natures-plus-coco-peat.jpg",
+         proName:"Natures Plus",
+         detail:"COCO Peat",
+         rate:4.2,
+         select:"1Kg -Rs.39",
+         price:39,
+         strike:"Rs.500",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+        },
+        {off:"Get 23% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/mm/40015817_1-natures-plus-coco-peat-block-coir-fibre-dust.jpg",
+         proName:"Naturals Plus",
+         detail:"COCO Peat Block-Coir Fibre Dust",
+         rate:4.3,
+         select:"5kg-Rs 279.00",
+         price:279,
+         strike:"Rs.360",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+        },
+        {off:"Get 31% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/mm/40191214_6-bb-home-borosilicate-glass-rectangular-baking-dish.jpg",
+         proName:"BB Home",
+         detail:"Borosilicate Glass Rectangular Baking Dish",
+         rate:4.2,
+         select:"1.6L-Rs.399.00",
+         price:399,
+         strike:"Rs.579",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+        },
+        {off:"Get 15% off ✹",
+         image_url:"https://www.bigbasket.com/media/uploads/p/mm/30005124_12-pedigree-meat-jerky-stix-grilled-liver-flavour-for-adult-dogs.jpg",
+         proName:"Pedigree",
+         detail:"Meat Jerky Stix - Grilled Liver Flavour, For Adult Dogs",
+         rate:4.5,
+         select:"80 g Pouch",
+         price:119,
+         strike:"Rs.149",
+         common:"Standard Delivery:Today 3:00PM-7:30PM",
+        },
+       ];
+
+       var datafromlocal=JSON.parse(localStorage.getItem("kitchen-garden"))||[];
+       displayData(data);
+       function displayData(data){
+      document.querySelector("#pdtbox").innerHTML="";
+      data.map(function(ele){
+           var div=document.createElement("div");
+
+           var div2=document.createElement("div");
+           var off=document.createElement("p");
+           off.innerText=ele.off;
+           div2.setAttribute("class","offer");
+           div2.append(off);
+
+           var image=document.createElement("img");
+           image.src=ele.image_url;
+           image.style.width="100%"
+           image.style.cursor="pointer";
+           image.addEventListener("click",function(){
+            myimgfun(ele);
+           });
+
+           var div4=document.createElement("div");
+           var pro=document.createElement("p");
+           pro.innerText=ele.proName;
+           pro.style.fontSize="12px";
+           pro.style.color="grey"
+           var name=document.createElement("p");
+           name.innerText=ele.detail;
+           name.style.margin="-12px auto -2px auto"
+           var rate=document.createElement("button");
+           rate.innerText=`${ele.rate}★`;
+           rate.style.border="none";
+           rate.style.color="#84c225"
+           rate.style.fontWeight="bold"
+           div4.append(pro,name,rate)
+
+           var select=document.createElement("select");
+           select.innerHTML=`<option>${ele.select}</option>`;
+           select.style.width="90%"
+
+           var div3=document.createElement("div");
+           var price=document.createElement("p");
+           price.innerText=`MRP Rs.${ele.price}`;
+           var strike=document.createElement("p");
+           strike.innerText=ele.strike;
+           strike.style.textDecoration="line-through"
+           div3.append(price,strike);
+           div3.style.display="flex";
+           div3.style.justifyContent="space-evenly";
+          
+
+           var div5=document.createElement("div");
+           var icon=document.createElement("i");
+           icon.setAttribute("class","fa-solid fa-truck");
+           var del=document.createElement("p");
+           del.innerText=ele.common;
+           div5.style.display="flex";
+           div5.append(icon,del);
+           
+           var divbot=document.createElement("div");
+           var quant=document.createElement("input");
+           quant.type="Number";
+           quant.style.width="20%"
+           quant.style.marginLeft="50px"
+           quant.value="1"
+           var but=document.createElement("button");
+           but.innerText="Add";
+           but.addEventListener("click",function(){
+             addtocart(ele);
+           });
+           but.setAttribute("id","but");
+          
+           divbot.append(quant,but);
+           
+
+           div.append(div2,image,div4,select,div3,div5,divbot); 
+
+           document.querySelector("#pdtbox").append(div);
+           localStorage.setItem("kitchen-garden",JSON.stringify(data));
+           
+       })
+
+       }
+       function addtocart(ele){
+         console.log(ele);
+         var cart=JSON.parse(localStorage.getItem("cartData"))||[];
+         cart.push(ele);
+         localStorage.setItem("cartData",JSON.stringify(cart));
+
+       }
+       function myimgfun(ele){
+         console.log(ele);
+         localStorage.setItem("product",JSON.stringify(ele));
+         window.location.href="product-page.html";
+       }
+       //-------------Sort Logic--------------------------------------------
+       document.querySelector("#sortby").addEventListener("change",sortByPrice);
+       function sortByPrice(){
+        var sortData=document.querySelector("#sortby").value;
+
+          if(sortData=="dsc"){
+          data.sort(function(a,b){
+            if(a.price>b.price) return -1;
+            if(a.price<b.price) return 1;
+            return 0;
+          })
+       console.log(data)
+       displayData(data);
+          }
+
+       if(sortData=="asc"){
+          data.sort(function(a,b){
+            if(a.price>b.price) return 1;
+            if(a.price<b.price) return -1;
+            return 0;
+          })
+       console.log(data)
+       displayData(data)
+      }
+
+        if(sortData=="alpha"){
+      data.sort(function (a, b) {
+      if (a.detail > b.detail) return 1;
+      if (a.detail < b.detail) return -1;
+      return 0;
+    });
+
+    console.log(data);
+    displayData(data)
+        }
+        if(sortData=="pop"){
+      data.sort(function (a, b) {
+      if (a.rate > b.rate) return -1;
+      if (a.rate < b.rate) return 1;
+      return 0;
+    });
+
+    console.log(data);
+    displayData(data)
+        }
+    }
+    //-----------------------------end of Sort Logic---------------------------
+     // -----------------checkBox Brand Logic----------------------------------
+     var a=b=c=d=0; var count1=0;
+    function funclick1(){
+        if(count1==0){
+            a=1;
+            count1++;  
+        }else{
+            a=0;
+            count1--;
+        }
+       
+        abc1();
+    }
+    var count2=0;
+    function funclick2(){
+        if(count2==0){
+            b=1;
+            count2++;  
+        }else{
+            b=0;
+            count2--;
+        }
+        abc2();
+    }
+    var count3=0;
+    function funclick3(){
+        if(count3==0){
+            c=1;
+            count3++;  
+        }else{
+            c=0;
+            count3--;
+        }
+        abc3(); 
+    }
+    var count4=0;
+    function funclick4(){
+        if(count4==0){
+            d=1;
+            count4++;  
+        }else{
+            d=0;
+            count4--;
+        }
+        abc4();
+    }
+    var checkBoxArr=[];
+     
+    function abc1(){
+      if(a==1){
+        var w=[]
+        data.map(function(ele){
+          if(ele.proName=="BB Home"){
+            
+            w.push(ele);
+            displayData(w);
+          }
+        })
+      }else{
+        displayData(data);
+      }
+    }
+   function abc2(){
+      if(b==1){
+        var x=[]
+         data.map(function(ele){
+           if(ele.proName=="Duracell"){
+             x.push(ele);
+             displayData(x);
+           }
+         })
+       }else{
+         displayData(data);
+       }
+      }
+  function abc3(){
+       if(c==1){
+        var y=[];
+         data.map(function(ele){
+           if(ele.proName=="Pedigree"){
+             y.push(ele);
+             displayData(y);
+           }
+         })
+       }else{
+         displayData(data);
+       }
+      }
+       function abc4(){
+       if(d==1){
+         var z=[];
+         data.map(function(ele){
+           if(ele.proName=="Natures Plus"){
+             z.push(ele);
+             displayData(z);
+           }
+         })
+       }else{
+         displayData(data);
+       }
+    }
+//--------------------- End of CheckBox Brand----------------------------
+//-----------------------------checkBox Price-------------------------------
+var a=b=c=d=0; var count1=0;
+    function funprice1(){
+        if(count1==0){
+            a=1;
+            count1++;  
+        }else{
+            a=0;
+            count1--;
+        }
+       
+        price1();
+    }
+    var count2=0;
+    function funprice2(){
+        if(count2==0){
+            b=1;
+            count2++;  
+        }else{
+            b=0;
+            count2--;
+        }
+        price2();
+    }
+    var count3=0;
+    function funprice3(){
+        if(count3==0){
+            c=1;
+            count3++;  
+        }else{
+            c=0;
+            count3--;
+        }
+        price3(); 
+    }
+    var count4=0;
+    function funprice4(){
+        if(count4==0){
+            d=1;
+            count4++;  
+        }else{
+            d=0;
+            count4--;
+        }
+        price4();
+    }
+
+    function price1(){
+      if(a==1){
+        var w=[]
+        data.map(function(ele){
+          if(ele.price < 50){
+            
+            w.push(ele);
+            displayData(w);
+          }
+        })
+      }else{
+        displayData(data);
+      }
+    }
+   function price2(){
+      if(b==1){
+        var x=[]
+         data.map(function(ele){
+           if(ele.price > 100 &&  ele.price < 200){
+             x.push(ele);
+             displayData(x);
+           }
+         })
+       }else{
+         displayData(data);
+       }
+      }
+  function price3(){
+       if(c==1){
+        var y=[];
+         data.map(function(ele){
+           if(ele.price<=500){
+             y.push(ele);
+             displayData(y);
+           }
+         })
+       }else{
+         displayData(data);
+       }
+      }
+       function price4(){
+       if(d==1){
+         var z=[];
+         data.map(function(ele){
+           if(ele.price>1000){
+             z.push(ele);
+             displayData(z);
+           }
+         })
+       }else{
+         displayData(data);
+       }
+    } 
+    //_---------------------------end of CheckBox Price-------------------------   
+     
+</script>

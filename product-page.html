@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+
+    *{
+        font-family: system-ui;
+    }
+    #container{
+        display: flex;
+        margin:auto;
+        width:85%;
+        gap: 30px;
+    }
+    #container_right{
+        width:60%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 10px;
+    }
+    #container_left{
+        margin-left: 100px; 
+
+    }
+    #price{
+        display: flex;
+        justify-content: space-between;
+        font-family: system-ui;
+        font-size: small;
+    }
+    #rating{
+        display: flex;
+        justify-content: space-between; 
+        font-size: small;
+    }
+    #Qty{
+        display: flex;
+        justify-content: space-between; 
+        height: 50px;
+        font-size: small;
+        margin-top: 10px;
+    }
+    #delivery{
+        display: flex;
+        justify-content: space-between; 
+        margin-bottom: 40px;
+        font-size: small;
+    }
+    #selection{
+        display: flex;
+        justify-content:space-between; 
+        border: 1px solid grey;
+        margin: 10px 10px 10px 10px;
+        font-size: small;
+        
+    }
+    
+    #mainselection{
+        width: 400px;
+        margin: auto;
+    }
+    #delivery > div > img{
+        width:50px;
+        height:40px;
+        margin-top: 5px;
+    }
+    #Qty > input{
+        height:50px;
+    }
+    #Qty > button{
+        height:50px;
+    }
+    #selection > div{
+        height:50px;
+        justify-content: center;
+        align-items: center;
+    }
+    #selection > div > div{
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    button{
+     background-color: rgb(148, 241, 41);
+     height: 40px;
+     width:100px;   
+     border: 1px solid white;
+    }
+    input{
+        height: 30px;
+        width:50px;
+    }
+    h5{
+        color: grey;
+    }
+    h3{
+        font-family: system-ui;
+        font-weight: 400;
+    }
+    #p2{
+        font-weight: bold;
+    }
+    #p3{
+        color: brown;
+    }
+    #p4{
+        color:grey;
+    }
+    #description{
+        margin-top: 80px;
+        padding: 30px;
+    }
+    #description >div > p{
+        font-size: small;
+    }
+</style>
+<body>
+
+
+<!-- --------------------------- -->
+
+    <div id="container">
+        <div id="container_left">
+            <img src=""  id="image1"/>
+        </div>
+
+
+        <div id="container_right">
+            <h5 id="pname"></h5>
+            <h2 id="detail"></h2>
+            <div id="price">
+                <p id="p1" style="margin: 10px;"></p>
+                <p id="p2"></p>
+                <p id="p3"></p>
+                <p id="p4">(Inclusive of all taxes)</p>
+                <div style="flex-grow: 2;"></div>
+            </div>
+            <div id="rating" style="text-align: left;";>
+                <div style="color: rgb(238, 74, 10); font-weight: bold;" id="rate"></div>
+                <div>48086 Ratings & 909 Reviews</div>
+                <div style="flex-grow: 2;"></div>
+            </div>
+            <div id="Qty">
+                <div><input type="number" placeholder="Qty" id="quant"/></div>
+                <button id="addtobasket">Add to Basket</button>
+                <button id="buy">Buy Now</button>
+                <div style="flex-grow: 2;"></div>
+            </div>
+            <div id="delivery">
+                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuDwm8x8Tp70RqelgMBTJzV5vKoTsnCM00gg&usqp=CAU"/></div>
+                <div><p>Standard: Today 3:00PM - 7:30PM</p></div>
+                <div style="flex-grow: 2;"></div>
+                <div></div>
+            </div>
+            <div id="mainselection">
+                <div id="selection" style="background-color: rgb(221, 216, 216);">
+                    <div>
+                        <div id="select"></div>
+                    </div>
+                    <div   style="background-color: rgb(148, 241, 41);">
+                        <div>✓</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------- -->
+
+    <div id="description">
+        <h3 id="pro"></h3>
+        <div>
+            <h4>About the Product</h4>
+            <p>Launched on 27th May 2002, Aashirvaad Whole Wheat Atta has now become number one in branded packaged atta across the country. Behind every Aashirvaad pack are the Indian farmers and Aashirvaad experts who’ve made the atta with extra care. Aashirvaad prides itself in making 100% pure whole wheat atta with all its natural dietary fibres intact which ensures that you and your family receive optimum nutrition for a healthy life. Directly sourced from a wide network of Indian rural farmers, Aashirvaad Superior MP Atta is Made in India. They are showered with just the right amount of rain and sun-kissed to perfection which allows the grains to be heavy on the palm and amber in colour. The grain produce goes through a 3-step cleaning process that ensures the best quality of wheat grains. These expertly sourced grains undergo mechanised packaging that ensures zero human contact and 100% safety. To ensure the retention of the wheat’s high nutritional value, the grains are ground using the traditional ‘chakki’ method. This helps lock-in the highest nutritional value in the whole wheat flour. The dietary fibres and natural nutrients help in easy digestion and supporting immunity which are essential for your family’s daily intake. The dough made from Aashirvaad Superior MP Atta absorbs more water which makes sure that the rotis remain softer for a longer period. You and your family can lead a fit and healthier lifestyle as you enjoy soft, fluffy and delicious rotis from this naturally protein rich whole wheat atta.</p>
+        </div>
+
+        <div>
+            <h4>Specification</h4>
+            <p id="brand"></p>
+            <p id="namepro"></p>
+            <p id="pp"></p>
+            <p id="offer"></p>
+        </div>
+
+        <div>
+            <h4>Nutritional Facts</h4>
+            <p>Energy (kcal) 367</p>
+            <p>Protein (g) 10.9</p>
+            <p>Fat(g) 1.7</p>
+            <p>Carbohydrate (g) 77.0, of which Sugar (g) 5.4</p>
+            <p>Dietary Fibre (g) 10.5</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var cart=JSON.parse(localStorage.getItem("cartData"))||[];
+    var product=JSON.parse(localStorage.getItem("product"));
+    console.log(product);
+    var proName =document.querySelector("#pname").innerText=product.proName;
+    var image=document.querySelector("#image1");
+    image.src=product.image_url;
+    image.style.width="500px";
+    var detail=document.querySelector("#detail").innerText=product.detail;
+    var strike=document.querySelector("#p1").innerText=`MRP Rs.${product.strike}`
+    var price=document.querySelector("#p2").innerText=`Price Rs. ${product.price}`;
+    var off=document.querySelector("#p3").innerText=product.off;
+    var rate=document.querySelector("#rate").innerText=`${product.rate}★`
+    var quant=document.querySelector("#quant").value=product.quant;
+    document.querySelector("#select").innerText=product.select;
+    console.log(product.select);
+    document.querySelector("#pro").innerText=product.proName+product.detail;
+
+    document.querySelector("#brand").innerText=`Brand : ${proName}`;
+    document.querySelector("#namepro").innerText=`Type : ${proName}`;
+    document.querySelector("#pp").innerText=`Cost : ${price}`;
+    document.querySelector("#offer").innerText=`Offer : ${off}`;
+    var but1=document.querySelector("#addtobasket");
+    but1.addEventListener("click",addtoCart);
+    function addtoCart(){
+        var obj={
+         off:off,
+         image_url:product.image_url,
+         proName:proName,
+         detail:detail,
+         rate:rate,
+         select:product.select,
+         price:price,
+         strike:strike,
+         common:product.common,
+         quantity:document.querySelector("#quant").value
+        }
+        console.log(obj)
+        cart.push(obj);
+        localStorage.setItem("cartData",JSON.stringify(cart));
+        alert("Successfully Added Product to Basket................. ")
+    }
+    but1.style.cursor="pointer";
+    var but2=document.querySelector("#buy");
+    but2.addEventListener("click",buyFun);
+    but2.style.cursor="pointer";
+     function buyFun(){
+         window.location.href="cart.html";
+     }
+    
+</script>
